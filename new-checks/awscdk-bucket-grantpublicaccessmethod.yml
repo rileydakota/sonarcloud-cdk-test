@@ -3,7 +3,7 @@ rules:
   pattern-either:
     - patterns:
       - pattern-inside: |
-          import {Bucket} from '@aws-cdk-lib/aws-s3' 
+          import {Bucket} from 'aws-cdk-lib/aws-s3' 
           ...
       - pattern: |
           const $X = new Bucket(...)
@@ -11,7 +11,7 @@ rules:
           $X.grantPublicAccess(...)
     - patterns:
       - pattern-inside: |
-          import * as $Y from '@aws-cdk-lib/aws-s3' 
+          import * as $Y from 'aws-cdk-lib/aws-s3' 
           ...
       - pattern: |
           const $X = new $Y.Bucket(...)

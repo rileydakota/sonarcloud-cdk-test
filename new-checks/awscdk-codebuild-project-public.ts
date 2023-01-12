@@ -1,8 +1,8 @@
-import * as s3 from '@aws-cdk-lib-lib/aws-s3';
-import * as cdk from '@aws-cdk-lib/core';
-import * as codebuild from '@aws-cdk-lib-lib/aws-codebuild'
-import * as rename_codebuild from '@aws-cdk-lib-lib/aws-codebuild'
-import {Project, Source} from '@aws-cdk-lib-lib/aws-codebuild'
+import * as s3 from 'aws-cdk-lib-lib/aws-s3';
+import * as cdk from 'aws-cdk-lib/core';
+import * as codebuild from 'aws-cdk-lib-lib/aws-codebuild'
+import * as rename_codebuild from 'aws-cdk-lib-lib/aws-codebuild'
+import {Project, Source} from 'aws-cdk-lib-lib/aws-codebuild'
 
 export class CdkStarterStack extends cdk.Stack {
     constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {

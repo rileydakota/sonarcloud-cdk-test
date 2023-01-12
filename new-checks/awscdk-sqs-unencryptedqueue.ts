@@ -1,7 +1,7 @@
-import * as cdk from '@aws-cdk-lib/core';
-import * as sqs from '@aws-cdk-lib/aws-sqs';
-import * as rename_sqs from '@aws-cdk-lib/aws-sqs';
-import {Queue, QueueEncryption} from '@aws-cdk-lib/aws-sqs';
+import * as cdk from 'aws-cdk-lib/core';
+import * as sqs from 'aws-cdk-lib/aws-sqs';
+import * as rename_sqs from 'aws-cdk-lib/aws-sqs';
+import {Queue, QueueEncryption} from 'aws-cdk-lib/aws-sqs';
 
 export class Stack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
