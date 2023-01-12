@@ -3,7 +3,7 @@ rules:
   pattern-either:
     - patterns:
       - pattern-inside: |
-          import {Queue} from '@aws-cdk/aws-sqs'
+          import {Queue} from 'aws-cdk-lib/aws-sqs'
           ...
       - pattern: const $X = new Queue(...)
       - pattern-not: |
@@ -12,7 +12,7 @@ rules:
           const $X = new Queue(..., {..., encryption: QueueEncryption.KMS, ...})
     - patterns:
       - pattern-inside: |
-          import * as $Y from '@aws-cdk/aws-sqs' 
+          import * as $Y from 'aws-cdk-lib/aws-sqs' 
           ...
       - pattern: const $X = new $Y.Queue(...)
       - pattern-not: |
