@@ -3,13 +3,13 @@ rules:
   pattern-either:
     - patterns:
       - pattern-inside: |
-          import {Project} from '@aws-cdk/aws-codebuild' 
+          import {Project} from '@aws-cdk-lib/aws-codebuild' 
           ...
       - pattern: |
           const $X = new Project(..., {..., badge: true, ...})
     - patterns:
       - pattern-inside: |
-          import * as $Y from '@aws-cdk/aws-codebuild' 
+          import * as $Y from '@aws-cdk-lib/aws-codebuild' 
           ...
       - pattern: |
           const $X = new $Y.Project(..., {..., badge: true, ...})
