@@ -4,6 +4,8 @@ import * as renamed_s3 from 'aws-cdk-lib/aws-s3';
 import {Bucket, BucketEncryption} from 'aws-cdk-lib/aws-s3';
 
 export class CdkStarterStack extends cdk.Stack {
+
+  public readonly badBucket: Bucket;
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
@@ -11,7 +13,7 @@ export class CdkStarterStack extends cdk.Stack {
       encryption: s3.BucketEncryption.S3_MANAGED
     })
 
-    const badBucket = new s3.Bucket(this, 's3-bucket-bad')
+    this.badBucket = new s3.Bucket(this, 's3-bucket-bad')
 
     const AnotherGoodBucket = new s3.Bucket(this, 's3-bucket', {
       encryption: s3.BucketEncryption.KMS_MANAGED
